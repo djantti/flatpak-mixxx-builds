@@ -1,0 +1,14 @@
+{
+  "name": "libdjinterop",
+  "buildsystem": "cmake-ninja",
+  "config-opts": [
+    "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
+  ],
+  "sources": [
+    {
+      "type": "archive",
+      "url": "https://github.com/xsco/libdjinterop/archive/refs/tags/0.22.1.tar.gz",
+      "sha256": "e811158d42c3864f5b682bcf76e0af78278050439d82d14d592dd0a391da6b20"
+    }
+  ]
+}

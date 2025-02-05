@@ -1,0 +1,19 @@
+{
+  "name": "protobuf",
+  "buildsystem": "cmake-ninja",
+  "config-opts": [
+    "-Dprotobuf_BUILD_TESTS=off",
+    "-Dprotobuf_ABSL_PROVIDER=package",
+    "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
+  ],
+  "sources": [
+    {
+      "type": "archive",
+      "url": "https://github.com/protocolbuffers/protobuf/releases/download/v29.2/protobuf-29.2.tar.gz",
+      "sha256": "63150aba23f7a90fd7d87bdf514e459dd5fe7023fdde01b56ac53335df64d4bd"
+    }
+  ],
+  "cleanup": [
+    "/bin"
+  ]
+}

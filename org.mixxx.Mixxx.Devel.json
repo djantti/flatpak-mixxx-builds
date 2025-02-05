@@ -1,0 +1,116 @@
+{
+  "app-id": "org.mixxx.Mixxx.Devel",
+  "runtime": "org.kde.Platform",
+  "runtime-version": "6.8",
+  "sdk": "org.kde.Sdk",
+  "command": "mixxx",
+  "rename-icon": "mixxx",
+  "finish-args": [
+    "--socket=wayland",
+    "--socket=fallback-x11",
+    "--socket=pulseaudio",
+    "--device=all",
+    "--share=network",
+    "--share=ipc",
+    "--filesystem=xdg-run/pipewire-0",
+    "--filesystem=xdg-music",
+    "--filesystem=/media",
+    "--filesystem=/run/media",
+    "--system-talk-name=org.freedesktop.UPower",
+    "--system-talk-name=org.freedesktop.RealtimeKit1",
+    "--system-talk-name=org.freedesktop.ScreenSaver",
+    "--env=ALSA_CONFIG_PATH=",
+    "--metadata=X-DConf=migrate-path=/org/mixxx/Mixxx",
+    "--persist=.mixxx"
+  ],
+  "add-extensions": {
+    "org.freedesktop.LinuxAudio.Plugins": {
+      "version": "24.08",
+      "directory": "extensions/Plugins",
+      "add-ld-path": "lib",
+      "merge-dirs": "lv2",
+      "no-autodownload": true
+    }
+  },
+  "cleanup": [
+    "/include",
+    "/share/gir-1.0",
+    "/share/man",
+    "/share/runtime",
+    "*.a",
+    "*.la",
+    "/lib/cmake",
+    "/lib/girepository-1.0",
+    "/lib/pkgconfig"
+  ],
+  "modules": [
+    "shared-modules/libmad/libmad.json",
+    "shared-modules/libusb/libusb.json",
+    "shared-modules/linux-audio/lv2.json",
+    "shared-modules/linux-audio/lilv.json",
+    "shared-modules/gudev/gudev.json",
+    "shared-modules/libsecret/libsecret.json",
+    "modules/googletest.json",
+    "modules/benchmark.json",
+    "modules/gsl.json",
+    "modules/abseil-cpp.json",
+    "modules/protobuf.json",
+    "modules/portaudio.json",
+    "modules/portmidi.json",
+    "modules/hidapi.json",
+    "modules/taglib.json",
+    "modules/chromaprint.json",
+    "modules/rubberband.json",
+    "modules/soundtouch.json",
+    "modules/libid3tag.json",
+    "modules/upower.json",
+    "modules/fdk-aac-stripped.json",
+    "modules/libmodplug.json",
+    "modules/qtkeychain.json",
+    "modules/libebur128.json",
+    "modules/libkeyfinder.json",
+    "modules/libdjinterop.json",
+    {
+      "name": "mixxx",
+      "buildsystem": "cmake-ninja",
+      "config-opts": [
+        "-DINSTALL_USER_UDEV_RULES=OFF",
+        "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
+      ],
+      "sources": [
+        {
+          "type": "git",
+          "url": "https://github.com/mixxxdj/mixxx.git",
+          "branch": "main"
+        },
+        {
+          "type": "file",
+          "path": "org.mixxx.Mixxx.Devel.metainfo.xml"
+        },
+        {
+          "commands": [
+            "export LV2_PATH=$HOME/.lv2:/app/extensions/Plugins/lv2:/app/lib/lv2",
+            "exec mixxx.bin \"$@\""
+          ],
+          "type": "script",
+          "dest-filename": "mixxx.sh"
+        }
+      ],
+      "cleanup": [
+        "/share/icons/hicolor/scalable/apps/mixxx_ios.svg",
+        "/share/icons/hicolor/scalable/apps/mixxx_macos.svg",
+        "/share/applications/org.mixxx.Mixxx.desktop",
+        "/share/metainfo/org.mixxx.Mixxx.metainfo.xml"
+      ],
+      "post-install": [
+        "desktop-file-edit --set-key=\"Exec\" --set-value=\"mixxx %U\" ${FLATPAK_DEST}/share/applications/org.mixxx.Mixxx.desktop",
+        "desktop-file-edit --set-key=\"Name\" --set-value=\"Mixxx (Devel)\" ${FLATPAK_DEST}/share/applications/org.mixxx.Mixxx.desktop",
+        "mv ${FLATPAK_DEST}/share/applications/org.mixxx.Mixxx.desktop ${FLATPAK_DEST}/share/applications/org.mixxx.Mixxx.Devel.desktop",
+        "mv ${FLATPAK_DEST}/bin/mixxx ${FLATPAK_DEST}/bin/mixxx.bin",
+        "install -Dm755 mixxx.sh ${FLATPAK_DEST}/bin/mixxx",
+        "install -Dm644 org.mixxx.Mixxx.Devel.metainfo.xml /app/share/metainfo/org.mixxx.Mixxx.Devel.metainfo.xml",
+        "install -d /app/extensions/Plugins"
+      ]
+    }
+  ]
+}

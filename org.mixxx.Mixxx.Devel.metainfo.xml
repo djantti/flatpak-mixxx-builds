@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>org.mixxx.Mixxx.Devel</id>
+  <metadata_license>CC-BY-SA-4.0</metadata_license>
+  <project_license>GPL-2.0</project_license>
+  <name>Mixxx (Devel)</name>
+  <summary>Perform live DJ mixes</summary>
+  <developer id="@mixxx@floss.social">
+    <name>The Mixxx Development Team</name>
+  </developer>
+  <description>
+    <p>
+      Mixxx is a highly customizable, cross-platform DJ application that
+      integrates all the tools DJs need to perform creative live mixes.
+    </p>
+    <ul>
+      <li>Blend songs together using automatic BPM matching and remix on the fly
+      with samples, loops and hot cues.</li>
+      <li>Never miss a beat with the scratchable waveform displays, volume
+      normalization and accurate tempo and key detection.</li>
+      <li>Spice up your mixes using high quality effects and flexible processing
+      chains.</li>
+      <li>Keep your music library perfectly organized with crates and
+      playlists.</li>
+      <li>Take a break by enabling Auto DJ with automatic crossfading.</li>
+    </ul>
+    <p>
+      Mixxx works with many popular DJ controllers and supports vinyl emulation
+      with Serato, Traktor, and Mixvibes timecodes. Whether you're an
+      experienced turntablist or just getting started, Mixxx has you covered.
+    </p>
+  </description>
+  <launchable type="desktop-id">org.mixxx.Mixxx.Devel.desktop</launchable>
+  <content_rating type="oars-1.1" />
+  <url type="bugtracker">https://github.com/mixxxdj/mixxx/issues</url>
+  <url type="contact">https://mixxx.zulipchat.com</url>
+  <url type="contribute">https://github.com/mixxxdj/mixxx/blob/main/CONTRIBUTING.md</url>
+  <url type="donation">https://opencollective.com/mixxx</url>
+  <url type="help">https://mixxx.org/support</url>
+  <url type="homepage">https://mixxx.org</url>
+  <url type="translate">https://explore.transifex.com/mixxx-dj-software</url>
+  <url type="vcs-browser">https://github.com/mixxxdj/mixxx</url>
+  <screenshots>
+    <screenshot type="default">
+      <image>https://github.com/djantti/flatpak-mixxx-builds/blob/c86613b62e9cf4331c686b081279f4deb7042496/screenshots/mixxx_devel.png</image>
+      <caption>Mixxx (development build) with default LateNight skin and two decks</caption>
+    </screenshot>
+  </screenshots>
+  <releases>
+    <release version="2.6.0" date="2025-01-03">
+    <url type="details">https://github.com/mixxxdj/mixxx/blob/main/CHANGELOG.md</url>
+    </release>
+  </releases>
+</component>
