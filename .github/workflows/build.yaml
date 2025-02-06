@@ -19,10 +19,18 @@ jobs:
         bundle: Mixxx-Devel.flatpak
         manifest-path: org.mixxx.Mixxx.Devel.json
         cache-key: flatpak-builder-${{ github.sha }}
+        upload-artifact: false
+    - name: Debug
+      run: |
+        echo "Creating a debug extension bundle..."
+        /app/bin/flatpak build-bundle repo \
+          --runtime-repo=https://flathub.org/repo/flathub.flatpakrepo \
+          --arch=x86_64 --runtime Mixxx-Devel.Debug.flatpak org.mixxx.Mixxx.Devel.Debug
     - name: Site
       run: |
         mkdir -p site
         mv Mixxx-Devel.flatpak site
+        mv Mixxx-Devel.Debug.flatpak site
     - name: Upload
       uses: actions/upload-pages-artifact@v3
       with:
