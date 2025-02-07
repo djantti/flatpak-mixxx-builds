@@ -1,12 +1,13 @@
 # Flatpak Mixxx builds
 
-This repository produces daily Flatpak development builds from [Mixxx](https://www.mixxx.org) main branch. Builds are available as single-file Flatpak bundles and the latest successful build can always be downloaded from the link below. Check the [Actions page](https://github.com/djantti/flatpak-mixxx-builds/actions) to download (GitHub account required) zipped artifacts from past workflow runs.
+This repository produces daily Flatpak development builds from [Mixxx](https://www.mixxx.org) main branch. Builds are available as single-file Flatpak bundles and the latest successful build can always be downloaded from the GitHub Pages link below. An optional debug extension bundle is also provided. Check the [Actions page](https://github.com/djantti/flatpak-mixxx-builds/actions) to download artifacts from past workflow runs.
 
 Please note that these are **unstable**, **untested** and **unofficial** builds. They should be used for development and testing purposes only. For a stable DJing experience, please install the official Mixxx Flatpak from [Flathub](https://flathub.org/apps/org.mixxx.Mixxx) or use distribution specific packages.
 
 # Download
 
-- 📦 [Mixxx-Devel.flatpak](https://djantti.github.io/flatpak-mixxx-builds/Mixxx-Devel.flatpak) (~18 MB)
+- 📦 [Mixxx-Devel.flatpak](https://djantti.github.io/flatpak-mixxx-builds/Mixxx-Devel.flatpak)
+- 🪲 [Mixxx-Devel.Debug.flatpak](https://djantti.github.io/flatpak-mixxx-builds/Mixxx-Devel.Debug.flatpak)
 
 # Usage
 
