@@ -6,7 +6,7 @@ jobs:
     name: "Flatpak 📦"
     runs-on: ubuntu-latest
     container:
-      image: ghcr.io/flathub-infra/flatpak-github-actions:kde-6.8
+      image: ghcr.io/flathub-infra/flatpak-github-actions:kde-6.9
       options: --privileged
     steps:
     - name: Checkout
