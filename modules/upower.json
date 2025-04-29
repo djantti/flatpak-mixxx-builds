@@ -10,8 +10,8 @@
   "sources": [
     {
       "type": "archive",
-      "url": "https://gitlab.freedesktop.org/upower/upower/-/archive/v1.90.6/upower-v1.90.6.tar.gz",
-      "sha256": "7e367c2619ca0f26d5bfc085b46bad9657b2774cc3eaffbf310b607df6e21377"
+      "url": "https://gitlab.freedesktop.org/upower/upower/-/archive/v1.90.9/upower-v1.90.9.tar.gz",
+      "sha256": "fffd45c50d29ed73ecdcfb11c3a7bb042ef14e84b14b0c2d5fdb78c7b4435d6c"
     }
   ],
   "cleanup": [
@@ -20,6 +20,7 @@
     "/libexec",
     "/var",
     "/share/dbus-1",
-    "/share/installed-tests"
+    "/share/installed-tests",
+    "/share/zsh"
   ]
 }

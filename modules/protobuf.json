@@ -3,14 +3,13 @@
   "buildsystem": "cmake-ninja",
   "config-opts": [
     "-Dprotobuf_BUILD_TESTS=off",
-    "-Dprotobuf_ABSL_PROVIDER=package",
     "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
   ],
   "sources": [
     {
       "type": "archive",
-      "url": "https://github.com/protocolbuffers/protobuf/releases/download/v29.2/protobuf-29.2.tar.gz",
-      "sha256": "63150aba23f7a90fd7d87bdf514e459dd5fe7023fdde01b56ac53335df64d4bd"
+      "url": "https://github.com/protocolbuffers/protobuf/releases/download/v30.2/protobuf-30.2.tar.gz",
+      "sha256": "fb06709acc393cc36f87c251bb28a5500a2e12936d4346099f2c6240f6c7a941"
     }
   ],
   "cleanup": [
