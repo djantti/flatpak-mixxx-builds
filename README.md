@@ -23,4 +23,4 @@ These builds use a custom application ID (*org.mixxx.Mixxx.Devel*), so it's poss
 
 - 🗃️ [Official Mixxx Flathub repository](https://github.com/flathub/org.mixxx.Mixxx)
 - 🏗️ [Flatpak Builder documentation](https://docs.flatpak.org/en/latest/flatpak-builder.html)
-- ✨ [Flatpak GitHub Actions](https://github.com/flathub-infra/flatpak-github-actions)
+- ✨ [Flatpak GitHub Actions](https://github.com/flatpak/flatpak-github-actions)
