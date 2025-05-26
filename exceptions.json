@@ -1,0 +1,8 @@
+{
+    "org.mixxx.Mixxx.Devel": [
+        "module-mixxx-source-git-branch",
+        "appid-url-not-reachable",
+        "appstream-external-screenshot-url",
+        "appstream-screenshots-not-mirrored-in-ostree"
+    ]
+}

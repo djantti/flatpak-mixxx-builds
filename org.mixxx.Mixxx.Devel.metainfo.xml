@@ -36,13 +36,13 @@
   <url type="contact">https://mixxx.zulipchat.com</url>
   <url type="contribute">https://github.com/mixxxdj/mixxx/blob/main/CONTRIBUTING.md</url>
   <url type="donation">https://opencollective.com/mixxx</url>
-  <url type="help">https://mixxx.org/support</url>
+  <url type="help">https://mixxx.org/support/</url>
   <url type="homepage">https://mixxx.org</url>
   <url type="translate">https://explore.transifex.com/mixxx-dj-software</url>
   <url type="vcs-browser">https://github.com/mixxxdj/mixxx</url>
   <screenshots>
     <screenshot type="default">
-      <image>https://github.com/djantti/flatpak-mixxx-builds/blob/c86613b62e9cf4331c686b081279f4deb7042496/screenshots/mixxx_devel.png</image>
+      <image>https://raw.githubusercontent.com/djantti/flatpak-mixxx-builds/c86613b62e9cf4331c686b081279f4deb7042496/screenshots/mixxx_devel.png</image>
       <caption>Mixxx (development build) with default LateNight skin and two decks</caption>
     </screenshot>
   </screenshots>
