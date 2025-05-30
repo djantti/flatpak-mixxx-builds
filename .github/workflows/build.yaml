@@ -1,6 +1,6 @@
 name: "Build 🧱"
 on:
-  workflow_dispatch:
+  workflow_call:
 
 jobs:
   build:
@@ -52,13 +52,13 @@ jobs:
           --arch=${{ matrix.variant.arch }} \
           --runtime Mixxx-Devel_${{ matrix.variant.arch }}.Debug.flatpak org.mixxx.Mixxx.Devel.Debug
 
-    - name: "Prepare bundles for upload"
+    - name: "Prepare bundle directory"
       run: |
         mkdir -p bundle
         mv Mixxx-Devel_${{ matrix.variant.arch }}.flatpak bundle
         mv Mixxx-Devel_${{ matrix.variant.arch }}.Debug.flatpak bundle
 
-    - name: "Upload bundle"
+    - name: "Upload bundles"
       uses: actions/Upload-artifact@v4
       with:
         name: bundle_${{ matrix.variant.arch }}
