@@ -1,10 +1,12 @@
 # Flatpak Mixxx builds
 
-This repository produces daily Flatpak development builds from [Mixxx](https://www.mixxx.org) main branch. Builds are available as single-file Flatpak bundles and the latest successful build can always be downloaded from the GitHub Pages links below. An optional debug extension bundle is also provided. Check the [Actions page](https://github.com/djantti/flatpak-mixxx-builds/actions) to download artifacts from past workflow runs.
+This repository produces daily Flatpak development builds from [Mixxx](https://www.mixxx.org) main branch. Builds are available as single-file Flatpak bundles and the latest successful build can always be downloaded from the GitHub Pages links below. An optional debug extension bundle is also provided.
 
 Please note that these are **unstable**, **untested** and **unofficial** builds. They should be used for development and testing purposes only. For a stable DJing experience, please install the official Mixxx Flatpak from [Flathub](https://flathub.org/apps/org.mixxx.Mixxx) or use distribution specific packages.
 
 # Downloads
+
+Latest builds for x86_64 and AArch64 architectures are listed here. Check the [Actions](https://github.com/djantti/flatpak-mixxx-builds/actions) page to download artifacts from past workflow runs.
 
 ### *x86_64*
 
@@ -18,7 +20,8 @@ Please note that these are **unstable**, **untested** and **unofficial** builds.
 
 # Examples
 
-- 🎚️ `flatpak install --user Mixxx-Devel_x86_64.flatpak`
+- 💻 `flatpak install --user Mixxx-Devel_x86_64.flatpak`
+- 🎚️ `flatpak run org.mixxx.Mixxx.Devel`
 - 🧹 `flatpak uninstall --user org.mixxx.Mixxx.Devel`
 - 🔎 `flatpak run --command=sh --devel org.mixxx.Mixxx.Devel`
 - 🧱 `flatpak-builder --force-clean --repo=repo build org.mixxx.Mixxx.Devel.json`
