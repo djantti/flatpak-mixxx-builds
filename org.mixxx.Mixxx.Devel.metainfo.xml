@@ -47,8 +47,8 @@
     </screenshot>
   </screenshots>
   <releases>
-    <release version="2.6.0" date="2025-04-27">
-    <url type="details">https://github.com/mixxxdj/mixxx/blob/main/CHANGELOG.md</url>
+    <release version="2.7.0" date="2025-05-14">
+      <url type="details">https://github.com/mixxxdj/mixxx/blob/main/CHANGELOG.md</url>
     </release>
   </releases>
 </component>
