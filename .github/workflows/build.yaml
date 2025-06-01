@@ -1,6 +1,11 @@
 name: "Build 🧱"
 on:
   workflow_call:
+    inputs:
+      repo_upload:
+        type: boolean
+        default: false
+        required: false
 
 jobs:
   build:
@@ -66,6 +71,7 @@ jobs:
 
     - name: "Upload repo"
       uses: actions/Upload-artifact@v4
+      if: inputs.repo_upload
       with:
         name: repo_${{ matrix.variant.arch }}
         path: repo

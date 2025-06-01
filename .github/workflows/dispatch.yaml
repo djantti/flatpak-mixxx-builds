@@ -9,3 +9,5 @@ jobs:
     permissions:
       id-token: write
       pages: write
+    with:
+      repo_upload: false
