@@ -27,9 +27,13 @@ jobs:
       with:
         submodules: recursive
 
-    - name: "Clone Mixxx repo"
+    - name: "Clone Mixxx repository"
       run: |
         git clone --single-branch --branch main https://github.com/mixxxdj/mixxx.git
+
+    - name: "Update MetaInfo metadata"
+      run: |
+        python3 scripts/update_metainfo.py
 
     - name: "Validate metadata"
       run: |

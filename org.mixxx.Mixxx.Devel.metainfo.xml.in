@@ -46,9 +46,4 @@
       <caption>Mixxx (development build) with default LateNight skin and two decks</caption>
     </screenshot>
   </screenshots>
-  <releases>
-    <release version="2.7.0" date="2025-05-14">
-      <url type="details">https://github.com/mixxxdj/mixxx/blob/main/CHANGELOG.md</url>
-    </release>
-  </releases>
 </component>
