@@ -6,9 +6,9 @@ Please note that these are **unstable**, **untested** and **unofficial** builds.
 
 # Downloads
 
-Latest builds for x86_64 and AArch64 architectures are listed here. Check the [Actions](https://github.com/djantti/flatpak-mixxx-builds/actions) page to download artifacts from past workflow runs.
+Latest builds for x86-64 and AArch64 architectures are listed here. Check the [Actions](https://github.com/djantti/flatpak-mixxx-builds/actions) page to download artifacts from past workflow runs.
 
-### *x86_64*
+### *x86-64*
 
 - 📦 [Mixxx-Devel_x86_64.flatpak](https://djantti.github.io/flatpak-mixxx-builds/Mixxx-Devel_x86_64.flatpak)
 - 🪲 [Mixxx-Devel_x86_64.Debug.flatpak](https://djantti.github.io/flatpak-mixxx-builds/Mixxx-Devel_x86_64.Debug.flatpak)
@@ -24,7 +24,14 @@ Latest builds for x86_64 and AArch64 architectures are listed here. Check the [A
 - 🎚️ `flatpak run org.mixxx.Mixxx.Devel`
 - 🧹 `flatpak uninstall --user org.mixxx.Mixxx.Devel`
 - 🔎 `flatpak run --command=sh --devel org.mixxx.Mixxx.Devel`
-- 🧱 `flatpak-builder --force-clean --repo=repo build org.mixxx.Mixxx.Devel.json`
+
+# Build
+
+1. `git clone https://github.com/djantti/flatpak-mixxx-builds.git`
+2. `cd flatpak-mixxx-builds`
+3. `git clone --single-branch --branch main https://github.com/mixxxdj/mixxx.git`
+4. `python3 scripts/update_metainfo.py`
+5. `flatpak-builder --force-clean --repo=repo build org.mixxx.Mixxx.Devel.json`
 
 # Notes
 
