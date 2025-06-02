@@ -79,9 +79,8 @@
       ],
       "sources": [
         {
-          "type": "git",
-          "url": "https://github.com/mixxxdj/mixxx.git",
-          "branch": "main"
+          "type": "dir",
+          "path": "./mixxx"
         },
         {
           "type": "file",

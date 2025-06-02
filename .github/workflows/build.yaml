@@ -27,6 +27,10 @@ jobs:
       with:
         submodules: recursive
 
+    - name: "Clone Mixxx repo"
+      run: |
+        git clone --single-branch --branch main https://github.com/mixxxdj/mixxx.git
+
     - name: "Validate metadata"
       run: |
         flatpak-builder-lint --exceptions \
