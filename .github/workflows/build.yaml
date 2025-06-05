@@ -14,6 +14,10 @@ on:
         type: boolean
         default: false
         required: false
+      repo_deploy:
+        type: boolean
+        default: false
+        required: false
 
 jobs:
   build:
@@ -93,6 +97,20 @@ jobs:
       with:
         name: repo_${{ matrix.variant.arch }}
         path: repo
+
+  repo:
+    name: "Repository 🛒"
+    runs-on: ubuntu-latest
+    needs: build
+    if: inputs.repo_upload && inputs.repo_deploy
+    steps:
+      - name: "Download repositories"
+        uses: actions/download-artifact@v4
+        with:
+          pattern: repo_*
+      - name: "Deploy repositories"
+        run: |
+          echo "Placeholder for repository deploy"
 
   pages:
     name: "Pages 📖"

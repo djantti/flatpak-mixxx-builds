@@ -13,3 +13,4 @@ jobs:
       bundle_upload: true
       repo_upload: false
       pages_deploy: true
+      repo_deploy: true
