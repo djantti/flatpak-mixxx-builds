@@ -50,12 +50,12 @@ jobs:
     - name: "Validate metadata"
       run: |
         flatpak-builder-lint --exceptions \
-          --user-exceptions exceptions.json appstream org.mixxx.Mixxx.Devel.metainfo.xml
+          --user-exceptions checks/exceptions.json appstream org.mixxx.Mixxx.Devel.metainfo.xml
 
     - name: "Validate manifest"
       run: |
         flatpak-builder-lint --exceptions \
-          --user-exceptions exceptions.json manifest org.mixxx.Mixxx.Devel.json
+          --user-exceptions checks/exceptions.json manifest org.mixxx.Mixxx.Devel.json
 
     - name: "Build Flatpak"
       uses: flatpak/flatpak-github-actions/flatpak-builder@v6
@@ -67,7 +67,7 @@ jobs:
         upload-artifact: false
 
     - name: "Validate repository"
-      run: flatpak-builder-lint --exceptions --user-exceptions exceptions.json repo repo
+      run: flatpak-builder-lint --exceptions --user-exceptions checks/exceptions.json repo repo
 
     - name: "Create debug bundle"
       run: |
