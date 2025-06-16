@@ -18,7 +18,7 @@
     "--filesystem=/run/media",
     "--system-talk-name=org.freedesktop.UPower",
     "--system-talk-name=org.freedesktop.RealtimeKit1",
-    "--system-talk-name=org.freedesktop.ScreenSaver",
+    "--talk-name=org.freedesktop.ScreenSaver",
     "--env=ALSA_CONFIG_PATH=",
     "--metadata=X-DConf=migrate-path=/org/mixxx/Mixxx",
     "--persist=.mixxx"
