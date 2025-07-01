@@ -13,5 +13,8 @@
   ],
   "cleanup": [
     "/share"
+  ],
+  "post-install": [
+      "install -Dm644 LICENSE.txt ${FLATPAK_DEST}/share/licenses/portaudio/LICENSE.txt"
   ]
 }

@@ -15,5 +15,9 @@
   ],
   "cleanup": [
     "/bin"
+  ],
+  "post-install": [
+      "install -Dm644 COPYING.LGPL ${FLATPAK_DEST}/share/licenses/taglib/COPYING.LGPL",
+      "install -Dm644 COPYING.MPL ${FLATPAK_DEST}/share/licenses/taglib/COPYING.MPL"
   ]
 }

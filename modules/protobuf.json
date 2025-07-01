@@ -14,5 +14,8 @@
   ],
   "cleanup": [
     "/bin"
+  ],
+  "post-install": [
+      "install -Dm644 LICENSE ${FLATPAK_DEST}/share/licenses/protobuf/LICENSE"
   ]
 }

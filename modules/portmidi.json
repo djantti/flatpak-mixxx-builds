@@ -13,5 +13,8 @@
   ],
   "cleanup": [
     "/bin"
+  ],
+  "post-install": [
+      "install -Dm644 license.txt ${FLATPAK_DEST}/share/licenses/portmidi/license.txt"
   ]
 }

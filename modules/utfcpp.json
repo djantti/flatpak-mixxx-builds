@@ -1,5 +1,5 @@
 {
-  "name": "gsl",
+  "name": "utfcpp",
   "buildsystem": "cmake-ninja",
   "config-opts": [
     "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
@@ -13,5 +13,8 @@
   ],
   "cleanup": [
     "/share/utf8cpp"
+  ],
+  "post-install": [
+      "install -Dm644 LICENSE ${FLATPAK_DEST}/share/licenses/utfcpp/LICENSE"
   ]
 }

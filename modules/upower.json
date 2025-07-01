@@ -22,5 +22,8 @@
     "/share/dbus-1",
     "/share/installed-tests",
     "/share/zsh"
+  ],
+  "post-install": [
+      "install -Dm644 ../COPYING ${FLATPAK_DEST}/share/licenses/upower/COPYING"
   ]
 }

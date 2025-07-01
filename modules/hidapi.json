@@ -10,5 +10,11 @@
       "url": "https://github.com/libusb/hidapi/archive/refs/tags/hidapi-0.14.0.tar.gz",
       "sha256": "a5714234abe6e1f53647dd8cba7d69f65f71c558b7896ed218864ffcf405bcbd"
     }
+  ],
+  "post-install": [
+      "install -Dm644 LICENSE-bsd.txt ${FLATPAK_DEST}/share/licenses/hidapi/LICENSE-bsd.txt",
+      "install -Dm644 LICENSE-gpl3.txt ${FLATPAK_DEST}/share/licenses/hidapi/LICENSE-gpl3.txt",
+      "install -Dm644 LICENSE-orig.txt ${FLATPAK_DEST}/share/licenses/hidapi/LICENSE-orig.txt",
+      "install -Dm644 LICENSE.txt ${FLATPAK_DEST}/share/licenses/hidapi/LICENSE.txt"
   ]
 }

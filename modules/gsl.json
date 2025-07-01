@@ -14,5 +14,8 @@
   ],
   "cleanup": [
     "/share/cmake"
+  ],
+  "post-install": [
+      "install -Dm644 LICENSE ${FLATPAK_DEST}/share/licenses/gsl/LICENSE"
   ]
 }
