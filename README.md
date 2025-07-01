@@ -29,9 +29,10 @@ Latest builds for x86-64 and AArch64 architectures are listed here. Check the [A
 
 1. `git clone https://github.com/djantti/flatpak-mixxx-builds.git`
 2. `cd flatpak-mixxx-builds`
-3. `git clone --single-branch --branch main https://github.com/mixxxdj/mixxx.git`
-4. `python3 scripts/update_metainfo.py`
-5. `flatpak-builder --force-clean --repo=repo build org.mixxx.Mixxx.Devel.json`
+3. `git submodule update --init --recursive`
+4. `git clone --single-branch --branch main https://github.com/mixxxdj/mixxx.git`
+5. `python3 scripts/update_metainfo.py`
+6. `flatpak-builder --force-clean --repo=repo build org.mixxx.Mixxx.Devel.json`
 
 # Notes
 
