@@ -58,7 +58,6 @@
     "modules/portmidi.json",
     "modules/hidapi.json",
     "modules/utfcpp.json",
-    "modules/taglib.json",
     "modules/chromaprint.json",
     "modules/rubberband.json",
     "modules/soundtouch.json",
