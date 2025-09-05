@@ -8,8 +8,8 @@
   "sources": [
     {
       "type": "archive",
-      "url": "https://github.com/protocolbuffers/protobuf/releases/download/v30.2/protobuf-30.2.tar.gz",
-      "sha256": "fb06709acc393cc36f87c251bb28a5500a2e12936d4346099f2c6240f6c7a941"
+      "url": "https://github.com/protocolbuffers/protobuf/releases/download/v32.0/protobuf-32.0.tar.gz",
+      "sha256": "9dfdf08129f025a6c5802613b8ee1395044fecb71d38210ca59ecad283ef68bb"
     }
   ],
   "cleanup": [
