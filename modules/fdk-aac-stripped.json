@@ -1,14 +1,17 @@
 {
   "name": "fdk-aac-stripped",
-  "buildsystem": "cmake-ninja",
-  "config-opts": [
-    "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
-  ],
+  "buildsystem": "autotools",
   "sources": [
     {
-      "type": "git",
-      "url": "https://gitlab.freedesktop.org/wtaymans/fdk-aac-stripped.git",
-      "commit": "529b87452cd33d45e1d0a5066d20b64f10b38845"
+      "type": "archive",
+      "url": "https://wtaymans.fedorapeople.org/fdk-aac-free-2.0.3.tar.gz",
+      "sha256": "2dc6952b70283888994ae6e551a79039781f0a64c67fb637bffd5a8f483c34c5",
+      "x-checker-data": {
+        "type": "anitya",
+        "project-id": 16208,
+        "stable-only": true,
+        "url-template": "https://wtaymans.fedorapeople.org/fdk-aac-free-$version.tar.gz"
+      }
     }
   ],
   "post-install": [

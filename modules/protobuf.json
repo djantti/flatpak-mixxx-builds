@@ -8,8 +8,14 @@
   "sources": [
     {
       "type": "archive",
-      "url": "https://github.com/protocolbuffers/protobuf/releases/download/v32.0/protobuf-32.0.tar.gz",
-      "sha256": "9dfdf08129f025a6c5802613b8ee1395044fecb71d38210ca59ecad283ef68bb"
+      "url": "https://github.com/protocolbuffers/protobuf/archive/refs/tags/v32.1.tar.gz",
+      "sha256": "d2081ab9528292f7980ef2d88d2be472453eea4222141046ad4f660874d5f24e",
+      "x-checker-data": {
+        "type": "anitya",
+        "project-id": 3715,
+        "stable-only": true,
+        "url-template": "https://github.com/protocolbuffers/protobuf/archive/refs/tags/v$version.tar.gz"
+      }
     }
   ],
   "cleanup": [

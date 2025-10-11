@@ -11,7 +11,13 @@
     {
       "type": "archive",
       "url": "https://gitlab.freedesktop.org/upower/upower/-/archive/v1.90.10/upower-v1.90.10.tar.gz",
-      "sha256": "7fcd51bece2526dbee5170feb3ffd1adab5b0cd023575f1fd119d969b73f4b90"
+      "sha256": "7fcd51bece2526dbee5170feb3ffd1adab5b0cd023575f1fd119d969b73f4b90",
+      "x-checker-data": {
+        "type": "anitya",
+        "project-id": 5056,
+        "stable-only": true,
+        "url-template": "https://gitlab.freedesktop.org/upower/upower/-/archive/v$version/upower-v$version.tar.gz"
+      }
     }
   ],
   "cleanup": [

@@ -8,8 +8,15 @@
   "sources": [
     {
       "type": "archive",
-      "url": "https://github.com/mixxxdj/libkeyfinder/archive/refs/tags/2.2.8.tar.gz",
-      "sha256": "a54fc6c5ff435bb4b447f175bc97f9081fb5abf0edd5d125e6f5215c8fff4d11"
+      "url": "https://api.github.com/repos/mixxxdj/libkeyfinder/tarball/2.2.8",
+      "sha256": "c31e1cadd414302be641567a931937fdd56e09815095ed7c5ef0404e99efa588",
+      "dest-filename": "libkeyfinder.tar.gz",
+      "x-checker-data": {
+        "type": "json",
+        "url": "https://api.github.com/repos/mixxxdj/libkeyfinder/releases/latest",
+        "version-query": ".tag_name",
+        "url-query": ".tarball_url"
+      }
     }
   ],
   "post-install": [

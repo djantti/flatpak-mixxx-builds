@@ -9,8 +9,14 @@
   "sources": [
     {
       "type": "archive",
-      "url": "https://github.com/acoustid/chromaprint/releases/download/v1.6.0/chromaprint-1.6.0.tar.gz",
-      "sha256": "9d33482e56a1389a37a0d6742c376139fa43e3b8a63d29003222b93db2cb40da"
+      "url": "https://github.com/acoustid/chromaprint/archive/refs/tags/v1.6.0.tar.gz",
+      "sha256": "65bfce4a35b2e673dbcda917b6aa577e2f145cf805243d19e6a50fea2a520c2a",
+      "x-checker-data": {
+        "type": "anitya",
+        "project-id": 286,
+        "stable-only": true,
+        "url-template": "https://github.com/acoustid/chromaprint/archive/refs/tags/v$version.tar.gz"
+      }
     }
   ],
   "post-install": [
