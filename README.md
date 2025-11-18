@@ -24,6 +24,7 @@ Latest builds for x86-64 and AArch64 architectures are listed here. Check the [A
 - 🎚️ `flatpak run org.mixxx.Mixxx.Devel`
 - 🧹 `flatpak uninstall --user org.mixxx.Mixxx.Devel`
 - 🔎 `flatpak run --command=sh --devel org.mixxx.Mixxx.Devel`
+- 🔔 `flatpak run org.flathub.flatpak-external-data-checker org.mixxx.Mixxx.Devel.json`
 
 # Build
 
@@ -31,7 +32,7 @@ Latest builds for x86-64 and AArch64 architectures are listed here. Check the [A
 2. `cd flatpak-mixxx-builds`
 3. `git submodule update --init --recursive`
 4. `git clone --single-branch --branch main https://github.com/mixxxdj/mixxx.git`
-5. `python3 scripts/update_metainfo.py`
+5. `python scripts/update_metainfo.py`
 6. `flatpak-builder --force-clean --repo=repo build org.mixxx.Mixxx.Devel.json`
 
 # Notes
@@ -40,6 +41,7 @@ These builds use a custom application ID (*org.mixxx.Mixxx.Devel*), so it's poss
 
 # Links
 
+- 🎛️ [Mixxx GitHub repository](https://github.com/mixxxdj/mixxx)
 - 🗃️ [Official Mixxx Flathub repository](https://github.com/flathub/org.mixxx.Mixxx)
 - 🏗️ [Flatpak Builder documentation](https://docs.flatpak.org/en/latest/flatpak-builder.html)
 - ✨ [Flatpak GitHub Actions](https://github.com/flatpak/flatpak-github-actions)
