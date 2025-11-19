@@ -62,6 +62,8 @@ jobs:
       with:
         bundle: Mixxx-Devel_${{ matrix.variant.arch }}.flatpak
         manifest-path: org.mixxx.Mixxx.Devel.json
+        cache: false
+        restore-cache: false
         cache-key: flatpak-builder-${{ matrix.variant.arch }}-${{ github.sha }}
         arch: ${{ matrix.variant.arch }}
         upload-artifact: false
