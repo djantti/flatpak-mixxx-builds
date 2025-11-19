@@ -2,8 +2,8 @@
   "name": "soundtouch",
   "buildsystem": "cmake-ninja",
   "config-opts": [
-    "-DSOUNDSTRETCH=OFF",
     "-DCMAKE_BUILD_TYPE=RelWithDebInfo",
+    "-DSOUNDSTRETCH=OFF",
     "-DNEON=OFF"
   ],
   "sources": [
@@ -18,6 +18,11 @@
         "url-template": "https://codeberg.org/soundtouch/soundtouch/archive/$version.tar.gz"
       }
     }
+  ],
+  "cleanup": [
+    "/include",
+    "/lib/cmake",
+    "/lib/pkgconfig"
   ],
   "post-install": [
       "install -Dm644 COPYING.TXT ${FLATPAK_DEST}/share/licenses/soundtouch/COPYING.TXT"

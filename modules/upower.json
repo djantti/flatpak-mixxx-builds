@@ -2,10 +2,14 @@
   "name": "upower",
   "buildsystem": "meson",
   "config-opts": [
+    "-Dbuildtype=debugoptimized",
+    "-Dman=false",
     "-Dgtk-doc=false",
+    "-Dintrospection=disabled",
     "-Dsystemdsystemunitdir=no",
     "-Dudevrulesdir=/app/etc/udev/rules.d",
-    "-Dudevhwdbdir=/app/etc/udev/hwdb.d"
+    "-Dudevhwdbdir=/app/etc/udev/hwdb.d",
+    "-Dzshcompletiondir=no"
   ],
   "sources": [
     {
@@ -23,11 +27,13 @@
   "cleanup": [
     "/bin",
     "/etc",
+    "/include",
     "/libexec",
-    "/var",
+    "/lib/pkgconfig",
+    "/share/locale",
+    "/share/runtime",
     "/share/dbus-1",
-    "/share/installed-tests",
-    "/share/zsh"
+    "/var"
   ],
   "post-install": [
       "install -Dm644 ../COPYING ${FLATPAK_DEST}/share/licenses/upower/COPYING"

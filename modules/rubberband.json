@@ -2,6 +2,7 @@
   "name": "rubberband",
   "buildsystem": "meson",
   "config-opts": [
+    "-Dbuildtype=debugoptimized",
     "-Dtests=disabled",
     "-Dcmdline=disabled",
     "-Dladspa=disabled",
@@ -20,6 +21,10 @@
         "url-template": "https://github.com/breakfastquay/rubberband/archive/refs/tags/v$version.tar.gz"
       }
     }
+  ],
+  "cleanup": [
+    "/include",
+    "/lib/pkgconfig"
   ],
   "post-install": [
       "install -Dm644 ../COPYING ${FLATPAK_DEST}/share/licenses/rubberband/COPYING"

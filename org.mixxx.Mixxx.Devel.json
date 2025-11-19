@@ -25,28 +25,26 @@
   ],
   "add-extensions": {
     "org.freedesktop.LinuxAudio.Plugins": {
-      "version": "25.08",
       "directory": "extensions/Plugins",
+      "version": "25.08",
       "add-ld-path": "lib",
       "merge-dirs": "lv2",
+      "subdirectories": true,
       "no-autodownload": true
     }
   },
   "cleanup": [
-    "/include",
-    "/share/gir-1.0",
-    "/share/man",
-    "/share/runtime",
     "*.a",
-    "*.la",
-    "/lib/cmake",
-    "/lib/girepository-1.0",
-    "/lib/pkgconfig"
+    "*.la"
   ],
   "modules": [
-    "shared-modules/libmad/libmad.json",
-    "shared-modules/linux-audio/lv2.json",
-    "shared-modules/linux-audio/lilv.json",
+    "modules/libmad.json",
+    "modules/lv2.json",
+    "modules/serd.json",
+    "modules/zix.json",
+    "modules/sord.json",
+    "modules/sratom.json",
+    "modules/lilv.json",
     "modules/googletest.json",
     "modules/benchmark.json",
     "modules/gsl.json",
@@ -70,8 +68,8 @@
       "name": "mixxx",
       "buildsystem": "cmake-ninja",
       "config-opts": [
-        "-DINSTALL_USER_UDEV_RULES=OFF",
-        "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
+        "-DCMAKE_BUILD_TYPE=RelWithDebInfo",
+        "-DINSTALL_USER_UDEV_RULES=OFF"
       ],
       "sources": [
         {

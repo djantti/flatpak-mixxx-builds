@@ -17,6 +17,11 @@
       }
     }
   ],
+  "cleanup": [
+    "/include",
+    "/lib/cmake",
+    "/lib/pkgconfig"
+  ],
   "post-install": [
       "install -Dm644 LICENSE ${FLATPAK_DEST}/share/licenses/libdjinterop/LICENSE"
   ]

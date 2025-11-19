@@ -2,9 +2,9 @@
   "name": "chromaprint",
   "buildsystem": "cmake-ninja",
   "config-opts": [
+    "-DCMAKE_BUILD_TYPE=RelWithDebInfo",
     "-DBUILD_TOOLS=OFF",
-    "-DBUILD_TESTS=OFF",
-    "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
+    "-DBUILD_TESTS=OFF"
   ],
   "sources": [
     {
@@ -18,6 +18,11 @@
         "url-template": "https://github.com/acoustid/chromaprint/archive/refs/tags/v$version.tar.gz"
       }
     }
+  ],
+  "cleanup": [
+    "/include",
+    "/lib/cmake",
+    "/lib/pkgconfig"
   ],
   "post-install": [
       "install -Dm644 LICENSE.md ${FLATPAK_DEST}/share/licenses/chromaprint/LICENSE.md"

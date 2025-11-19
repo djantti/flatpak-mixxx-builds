@@ -1,0 +1,27 @@
+{
+  "name": "sratom",
+  "buildsystem": "meson",
+  "config-opts": [
+    "-Dbuildtype=debugoptimized"
+  ],
+  "sources": [
+    {
+      "type": "archive",
+      "url": "https://download.drobilla.net/sratom-0.6.18.tar.xz",
+      "sha256": "4c6a6d9e0b4d6c01cc06a8849910feceb92e666cb38779c614dd2404a9931e92",
+      "x-checker-data": {
+        "type": "anitya",
+        "project-id": 14903,
+        "stable-only": true,
+        "url-template": "https://download.drobilla.net/sratom-$version.tar.xz"
+      }
+    }
+  ],
+  "cleanup": [
+    "/include",
+    "/lib/pkgconfig"
+  ],
+  "post-install": [
+    "install -Dm644 -t $FLATPAK_DEST/share/licenses/sratom ../COPYING"
+  ]
+}

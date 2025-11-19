@@ -18,6 +18,11 @@
       }
     }
   ],
+  "cleanup": [
+    "/include",
+    "/lib/cmake",
+    "/lib/pkgconfig"
+  ],
   "post-install": [
       "install -Dm644 COPYING ${FLATPAK_DEST}/share/licenses/libid3tag/COPYING"
   ]

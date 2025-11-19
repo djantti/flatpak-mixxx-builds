@@ -1,0 +1,30 @@
+{
+  "name": "sord",
+  "buildsystem": "meson",
+  "config-opts": [
+    "-Dbuildtype=debugoptimized"
+  ],
+  "sources": [
+    {
+      "type": "archive",
+      "url": "https://download.drobilla.net/sord-0.16.20.tar.xz",
+      "sha256": "508b41d6b4f9d5902c9f5b9cf25170d9d0636f68f11bd257c1150497f754a2a4",
+      "x-checker-data": {
+        "type": "anitya",
+        "project-id": 230536,
+        "stable-only": true,
+        "url-template": "https://download.drobilla.net/sord-$version.tar.xz"
+      }
+    }
+  ],
+  "cleanup": [
+    "/bin",
+    "/include",
+    "/lib/pkgconfig",
+    "/share/doc",
+    "/share/man"
+  ],
+  "post-install": [
+    "install -Dm644 -t $FLATPAK_DEST/share/licenses/sord ../COPYING"
+  ]
+}

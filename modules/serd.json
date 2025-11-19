@@ -1,0 +1,29 @@
+{
+  "name": "serd",
+  "buildsystem": "meson",
+  "config-opts": [
+    "-Dbuildtype=debugoptimized"
+  ],
+  "sources": [
+    {
+      "type": "archive",
+      "url": "https://download.drobilla.net/serd-0.32.6.tar.xz",
+      "sha256": "0fbe094952fe176ba4da4f2f767ddfb5f60e67e64d1761b4383a0b872cfd071a",
+      "x-checker-data": {
+        "type": "anitya",
+        "project-id": 230531,
+        "stable-only": true,
+        "url-template": "https://download.drobilla.net/serd-$version.tar.xz"
+      }
+    }
+  ],
+  "cleanup": [
+    "/bin",
+    "/include",
+    "/lib/pkgconfig",
+    "/share/man"
+  ],
+  "post-install": [
+    "install -Dm644 -t $FLATPAK_DEST/share/licenses/serd ../COPYING"
+  ]
+}

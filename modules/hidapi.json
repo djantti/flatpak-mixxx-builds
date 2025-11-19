@@ -17,6 +17,11 @@
       }
     }
   ],
+  "cleanup": [
+    "/include",
+    "/lib/cmake",
+    "/lib/pkgconfig"
+  ],
   "post-install": [
       "install -Dm644 LICENSE-bsd.txt ${FLATPAK_DEST}/share/licenses/hidapi/LICENSE-bsd.txt",
       "install -Dm644 LICENSE-gpl3.txt ${FLATPAK_DEST}/share/licenses/hidapi/LICENSE-gpl3.txt",

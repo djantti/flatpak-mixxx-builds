@@ -2,8 +2,8 @@
   "name": "protobuf",
   "buildsystem": "cmake-ninja",
   "config-opts": [
-    "-Dprotobuf_BUILD_TESTS=off",
-    "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
+    "-DCMAKE_BUILD_TYPE=RelWithDebInfo",
+    "-Dprotobuf_BUILD_TESTS=off"
   ],
   "sources": [
     {
@@ -19,7 +19,10 @@
     }
   ],
   "cleanup": [
-    "/bin"
+    "/bin",
+    "/include",
+    "/lib/cmake",
+    "/lib/pkgconfig"
   ],
   "post-install": [
       "install -Dm644 LICENSE ${FLATPAK_DEST}/share/licenses/protobuf/LICENSE"

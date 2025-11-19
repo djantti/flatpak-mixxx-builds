@@ -2,9 +2,9 @@
   "name": "benchmark",
   "buildsystem": "cmake-ninja",
   "config-opts": [
+    "-DCMAKE_BUILD_TYPE=RelWithDebInfo",
     "-DBENCHMARK_ENABLE_GTEST_TESTS=OFF",
-    "-DBENCHMARK_INSTALL_DOCS=OFF",
-    "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
+    "-DBENCHMARK_INSTALL_DOCS=OFF"
   ],
   "sources": [
       {
@@ -18,6 +18,11 @@
         "url-template": "https://github.com/google/benchmark/archive/refs/tags/v$version.tar.gz"
       }
     }
+  ],
+  "cleanup": [
+    "/include",
+    "/lib/cmake",
+    "/lib/pkgconfig"
   ],
   "post-install": [
       "install -Dm644 LICENSE ${FLATPAK_DEST}/share/licenses/benchmark/LICENSE"

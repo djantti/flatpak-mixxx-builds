@@ -18,6 +18,9 @@
     }
   ],
   "cleanup": [
+    "/include",
+    "/lib/cmake",
+    "/lib/pkgconfig",
     "/share/utf8cpp"
   ],
   "post-install": [

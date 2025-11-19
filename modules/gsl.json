@@ -2,8 +2,8 @@
   "name": "gsl",
   "buildsystem": "cmake-ninja",
   "config-opts": [
-    "-DGSL_TEST=OFF",
-    "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
+    "-DCMAKE_BUILD_TYPE=RelWithDebInfo",
+    "-DGSL_TEST=OFF"
   ],
   "sources": [
     {
@@ -19,6 +19,7 @@
     }
   ],
   "cleanup": [
+    "/include",
     "/share/cmake"
   ],
   "post-install": [
