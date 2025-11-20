@@ -25,6 +25,9 @@ jobs:
     container:
       image: ghcr.io/flathub-infra/flatpak-github-actions:kde-6.10
       options: --privileged
+      volumes:
+        - /usr:/host/usr
+        - /opt:/host/opt
     strategy:
       matrix:
         variant:
@@ -34,6 +37,18 @@ jobs:
             runner: ubuntu-24.04-arm
     runs-on: ${{ matrix.variant.runner }}
     steps:
+    - name: "Recover host disk space"
+      run: |
+        echo "Recovering host disk space..."
+        rm -rf /host/opt/hostedtoolcache/CodeQL
+        rm -rf /host/opt/hostedtoolcache/go
+        rm -rf /host/usr/local/lib/android
+        rm -rf /host/usr/local/.ghcup
+        rm -rf /host/usr/local/share/powershell
+        rm -rf /host/usr/share/swift
+        rm -rf /host/usr/share/dotnet
+        df -h
+
     - name: "Repo checkout"
       uses: actions/checkout@v4
       with:
@@ -45,7 +60,7 @@ jobs:
 
     - name: "Update MetaInfo metadata"
       run: |
-        python3 scripts/update_metainfo.py
+        python scripts/update_metainfo.py
 
     - name: "Validate metadata"
       run: |
