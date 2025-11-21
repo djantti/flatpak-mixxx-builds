@@ -2,7 +2,9 @@
   "name": "sratom",
   "buildsystem": "meson",
   "config-opts": [
-    "-Dbuildtype=debugoptimized"
+    "-Dbuildtype=debugoptimized",
+    "-Ddocs=disabled",
+    "-Dtests=disabled"
   ],
   "sources": [
     {

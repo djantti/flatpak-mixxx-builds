@@ -13,7 +13,7 @@
       "dest-filename": "portaudio.tar.gz",
       "x-checker-data": {
         "type": "anitya",
-        "project-id": 256432,
+        "project-id": 10597,
         "stable-only": true,
         "url-template": "https://github.com/PortAudio/portaudio/archive/refs/tags/v$version.tar.gz"
       }

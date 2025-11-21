@@ -3,8 +3,7 @@
   "buildsystem": "cmake-ninja",
   "config-opts": [
     "-DCMAKE_BUILD_TYPE=RelWithDebInfo",
-    "-DSOUNDSTRETCH=OFF",
-    "-DNEON=OFF"
+    "-DSOUNDSTRETCH=OFF"
   ],
   "sources": [
     {

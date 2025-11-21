@@ -3,10 +3,10 @@
   "buildsystem": "meson",
   "config-opts": [
     "-Dbuildtype=debugoptimized",
-    "-Dtests=disabled",
-    "-Dcmdline=disabled",
     "-Dladspa=disabled",
-    "-Dlv2=disabled"
+    "-Dlv2=disabled",
+    "-Dcmdline=disabled",
+    "-Dtests=disabled"
   ],
   "sources": [
     {

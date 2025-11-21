@@ -2,7 +2,11 @@
   "name": "zix",
   "buildsystem": "meson",
   "config-opts": [
-    "-Dbuildtype=debugoptimized"
+    "-Dbuildtype=debugoptimized",
+    "-Dbenchmarks=disabled",
+    "-Ddocs=disabled",
+    "-Dtests=disabled",
+    "-Dtests_cpp=disabled"
   ],
   "sources": [
     {

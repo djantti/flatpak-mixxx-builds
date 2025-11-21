@@ -3,7 +3,8 @@
   "buildsystem": "meson",
   "config-opts": [
     "-Dbuildtype=debugoptimized",
-    "-Ddocs=disabled"
+    "-Ddocs=disabled",
+    "-Dtests=disabled"
   ],
   "sources": [
     {

@@ -3,6 +3,7 @@
   "buildsystem": "cmake-ninja",
   "config-opts": [
     "-DCMAKE_BUILD_TYPE=RelWithDebInfo",
+    "-DBENCHMARK_ENABLE_TESTING=OFF",
     "-DBENCHMARK_ENABLE_GTEST_TESTS=OFF",
     "-DBENCHMARK_INSTALL_DOCS=OFF"
   ],

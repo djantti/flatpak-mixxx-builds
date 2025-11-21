@@ -2,7 +2,11 @@
   "name": "sord",
   "buildsystem": "meson",
   "config-opts": [
-    "-Dbuildtype=debugoptimized"
+    "-Dbuildtype=debugoptimized",
+    "-Ddocs=disabled",
+    "-Dman=disabled",
+    "-Dtests=disabled",
+    "-Dtools=disabled"
   ],
   "sources": [
     {
@@ -18,11 +22,8 @@
     }
   ],
   "cleanup": [
-    "/bin",
     "/include",
-    "/lib/pkgconfig",
-    "/share/doc",
-    "/share/man"
+    "/lib/pkgconfig"
   ],
   "post-install": [
     "install -Dm644 -t $FLATPAK_DEST/share/licenses/sord ../COPYING"

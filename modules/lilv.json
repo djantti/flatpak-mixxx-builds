@@ -3,7 +3,10 @@
   "buildsystem": "meson",
   "config-opts": [
     "-Dbuildtype=debugoptimized",
-    "-Dbindings_py=disabled"
+    "-Dbindings_py=disabled",
+    "-Ddocs=disabled",
+    "-Dtests=disabled",
+    "-Dtools=disabled"
   ],
   "sources": [
     {
@@ -19,11 +22,9 @@
     }
   ],
   "cleanup": [
-    "/bin",
     "/etc",
     "/include",
-    "/lib/pkgconfig",
-    "/share/man"
+    "/lib/pkgconfig"
   ],
   "post-install": [
     "install -Dm644 -t $FLATPAK_DEST/share/licenses/lilv ../COPYING"

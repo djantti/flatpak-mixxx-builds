@@ -3,7 +3,6 @@
   "buildsystem": "cmake-ninja",
   "config-opts": [
     "-DCMAKE_BUILD_TYPE=RelWithDebInfo",
-    "-DBUILD_TOOLS=OFF",
     "-DBUILD_TESTS=OFF"
   ],
   "sources": [
