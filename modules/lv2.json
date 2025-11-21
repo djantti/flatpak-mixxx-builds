@@ -9,13 +9,13 @@
   "sources": [
     {
       "type": "archive",
-      "url": "https://lv2plug.in/spec/lv2-1.18.10.tar.xz",
-      "sha256": "78c51bcf21b54e58bb6329accbb4dae03b2ed79b520f9a01e734bd9de530953f",
+      "url": "https://gitlab.com/lv2/lv2/-/archive/v1.18.10/lv2-v1.18.10.tar.gz",
+      "sha256": "edc39ae4170d21574d7fe4da2d83d9f1cdf97316b87b4dfeda390a1864c4a8d6",
       "x-checker-data": {
         "type": "anitya",
         "project-id": 230934,
         "stable-only": true,
-        "url-template": "https://lv2plug.in/spec/lv2-$version.tar.xz"
+        "url-template": "https://gitlab.com/lv2/lv2/-/archive/v$version/lv2-v$version.tar.gz"
       }
     }
   ],

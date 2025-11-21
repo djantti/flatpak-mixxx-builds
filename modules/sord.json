@@ -11,13 +11,13 @@
   "sources": [
     {
       "type": "archive",
-      "url": "https://download.drobilla.net/sord-0.16.20.tar.xz",
-      "sha256": "508b41d6b4f9d5902c9f5b9cf25170d9d0636f68f11bd257c1150497f754a2a4",
+      "url": "https://gitlab.com/drobilla/sord/-/archive/v0.16.20/sord-v0.16.20.tar.gz",
+      "sha256": "00f5b551ce93e5c0696b96b8d284af13190a15d7d04fb6fa2e9c4964f626e675",
       "x-checker-data": {
         "type": "anitya",
         "project-id": 230536,
         "stable-only": true,
-        "url-template": "https://download.drobilla.net/sord-$version.tar.xz"
+        "url-template": "https://gitlab.com/drobilla/sord/-/archive/v$version/sord-v$version.tar.gz"
       }
     }
   ],

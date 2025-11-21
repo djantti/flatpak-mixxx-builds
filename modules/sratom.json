@@ -9,13 +9,13 @@
   "sources": [
     {
       "type": "archive",
-      "url": "https://download.drobilla.net/sratom-0.6.18.tar.xz",
-      "sha256": "4c6a6d9e0b4d6c01cc06a8849910feceb92e666cb38779c614dd2404a9931e92",
+      "url": "https://gitlab.com/lv2/sratom/-/archive/v0.6.20/sratom-v0.6.20.tar.gz",
+      "sha256": "2e71c82c1fc3b22551077e60ba5858c0dc42a5803f084f90ed2c34ccf21927ff",
       "x-checker-data": {
         "type": "anitya",
         "project-id": 14903,
         "stable-only": true,
-        "url-template": "https://download.drobilla.net/sratom-$version.tar.xz"
+        "url-template": "https://gitlab.com/lv2/sratom/-/archive/v$version/sratom-v$version.tar.gz"
       }
     }
   ],

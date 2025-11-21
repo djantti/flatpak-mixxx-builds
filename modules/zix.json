@@ -11,13 +11,13 @@
   "sources": [
     {
       "type": "archive",
-      "url": "https://download.drobilla.net/zix-0.8.0.tar.xz",
-      "sha256": "e9b6fe3ede984fa53f2edcebdabb35fb99ace807722772156aea49c079cad191",
+      "url": "https://gitlab.com/drobilla/zix/-/archive/v0.8.0/zix-v0.8.0.tar.gz",
+      "sha256": "51d70d63e970214db84e32d55377d84090c02145f5768265ab140d117f2b8e24",
       "x-checker-data": {
         "type": "anitya",
         "project-id": 370005,
         "stable-only": true,
-        "url-template": "https://download.drobilla.net/zix-$version.tar.xz"
+        "url-template": "https://gitlab.com/drobilla/zix/-/archive/v$version/zix-v$version.tar.gz"
       }
     }
   ],

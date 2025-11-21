@@ -11,13 +11,13 @@
   "sources": [
     {
       "type": "archive",
-      "url": "https://download.drobilla.net/serd-0.32.6.tar.xz",
-      "sha256": "0fbe094952fe176ba4da4f2f767ddfb5f60e67e64d1761b4383a0b872cfd071a",
+      "url": "https://gitlab.com/drobilla/serd/-/archive/v0.32.6/serd-v0.32.6.tar.gz",
+      "sha256": "7fcea95de1a676c6bc33c2ee24f3c179cec613765db1ea8562dec0e6fe6eb292",
       "x-checker-data": {
         "type": "anitya",
         "project-id": 230531,
         "stable-only": true,
-        "url-template": "https://download.drobilla.net/serd-$version.tar.xz"
+        "url-template": "https://gitlab.com/drobilla/serd/-/archive/v$version/serd-v$version.tar.gz"
       }
     }
   ],
