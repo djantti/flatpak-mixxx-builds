@@ -24,6 +24,6 @@
     "/lib/pkgconfig"
   ],
   "post-install": [
-      "install -Dm644 LICENSE.md ${FLATPAK_DEST}/share/licenses/chromaprint/LICENSE.md"
+    "install -Dm644 LICENSE.md ${FLATPAK_DEST}/share/licenses/chromaprint/LICENSE.md"
   ]
 }

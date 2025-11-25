@@ -27,6 +27,6 @@
     "/lib/pkgconfig"
   ],
   "post-install": [
-      "install -Dm644 ../COPYING ${FLATPAK_DEST}/share/licenses/rubberband/COPYING"
+    "install -Dm644 ../COPYING ${FLATPAK_DEST}/share/licenses/rubberband/COPYING"
   ]
 }

@@ -19,6 +19,6 @@
     "/lib/pkgconfig"
   ],
   "post-install": [
-      "install -Dm644 NOTICE ${FLATPAK_DEST}/share/licenses/fdk-aac-stripped/NOTICE"
+    "install -Dm644 NOTICE ${FLATPAK_DEST}/share/licenses/fdk-aac-stripped/NOTICE"
   ]
 }

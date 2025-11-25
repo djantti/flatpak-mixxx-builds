@@ -26,6 +26,6 @@
     "/share/doc"
   ],
   "post-install": [
-      "install -Dm644 LICENSE.txt ${FLATPAK_DEST}/share/licenses/portaudio/LICENSE.txt"
+    "install -Dm644 LICENSE.txt ${FLATPAK_DEST}/share/licenses/portaudio/LICENSE.txt"
   ]
 }
