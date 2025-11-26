@@ -1,0 +1,35 @@
+{
+  "name": "qtsvg",
+  "buildsystem": "cmake-ninja",
+  "config-opts": [
+    "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
+  ],
+  "sources": [
+    {
+      "type": "archive",
+      "url": "https://download.qt.io/official_releases/qt/6.10/6.10.1/submodules/qtsvg-everywhere-src-6.10.1.tar.xz",
+      "sha256": "c02f355a58f3bbcf404a628bf488b6aeb2d84a94c269afdb86f6e529343ab01f",
+      "x-checker-data": {
+        "type": "anitya",
+        "project-id": 7927,
+        "stable-only": true,
+        "versions": {
+          "<": "6.11.0"
+        },
+        "url-template": "https://download.qt.io/official_releases/qt/6.10/$version/submodules/qtsvg-everywhere-src-$version.tar.xz"
+      }
+    }
+  ],
+  "cleanup": [
+    "/include",
+    "/lib/cmake",
+    "/lib/pkgconfig",
+    "/metatypes",
+    "/mkspecs",
+    "/modules",
+    "/sbom"
+  ],
+  "post-install": [
+    "install -Dm644 LICENSES/GPL-2.0-only.txt ${FLATPAK_DEST}/share/licenses/qtsvg/GPL-2.0-only.txt"
+  ]
+}

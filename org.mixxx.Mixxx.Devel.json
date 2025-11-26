@@ -1,8 +1,8 @@
 {
   "app-id": "org.mixxx.Mixxx.Devel",
-  "runtime": "org.kde.Platform",
-  "runtime-version": "6.10",
-  "sdk": "org.kde.Sdk",
+  "runtime": "org.freedesktop.Platform",
+  "runtime-version": "25.08",
+  "sdk": "org.freedesktop.Sdk",
   "command": "mixxx",
   "rename-icon": "mixxx",
   "finish-args": [
@@ -35,9 +35,16 @@
   },
   "cleanup": [
     "*.a",
-    "*.la"
+    "*.la",
+    "*.prl"
   ],
   "modules": [
+    "modules/qtbase.json",
+    "modules/qtshadertools.json",
+    "modules/qtdeclarative.json",
+    "modules/qtsvg.json",
+    "modules/qt5compat.json",
+    "modules/qtwayland.json",
     "modules/libmad.json",
     "modules/lv2.json",
     "modules/serd.json",

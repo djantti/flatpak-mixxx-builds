@@ -1,0 +1,39 @@
+{
+  "name": "qtdeclarative",
+  "buildsystem": "cmake-ninja",
+  "config-opts": [
+    "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
+  ],
+  "sources": [
+    {
+      "type": "archive",
+      "url": "https://download.qt.io/official_releases/qt/6.10/6.10.1/submodules/qtdeclarative-everywhere-src-6.10.1.tar.xz",
+      "sha256": "4fb4efb894e0b96288543505d69794d684bcfbe4940ce181d3e6817bda54843e",
+      "x-checker-data": {
+        "type": "anitya",
+        "project-id": 7927,
+        "stable-only": true,
+        "versions": {
+          "<": "6.11.0"
+        },
+        "url-template": "https://download.qt.io/official_releases/qt/6.10/$version/submodules/qtdeclarative-everywhere-src-$version.tar.xz"
+      }
+    }
+  ],
+  "cleanup": [
+    "/bin",
+    "/include",
+    "/libexec",
+    "/lib/cmake",
+    "/lib/objects-RelWithDebInfo",
+    "/lib/pkgconfig",
+    "/metatypes",
+    "/mkspecs",
+    "/modules",
+    "/qml",
+    "/sbom"
+  ],
+  "post-install": [
+    "install -Dm644 LICENSES/GPL-2.0-only.txt ${FLATPAK_DEST}/share/licenses/qtdeclarative/GPL-2.0-only.txt"
+  ]
+}

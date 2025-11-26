@@ -1,0 +1,36 @@
+{
+  "name": "qtwayland",
+  "buildsystem": "cmake-ninja",
+  "config-opts": [
+    "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
+  ],
+  "sources": [
+      {
+      "type": "archive",
+      "url": "https://download.qt.io/official_releases/qt/6.10/6.10.1/submodules/qtwayland-everywhere-src-6.10.1.tar.xz",
+      "sha256": "49bf6db800227a6b2c971f4c5d03dd1e81297e7ffb296ce4a96437304f27cb13",
+      "x-checker-data": {
+        "type": "anitya",
+        "project-id": 7927,
+        "stable-only": true,
+        "versions": {
+            "<": "6.11.0"
+        },
+        "url-template": "https://download.qt.io/official_releases/qt/6.10/$version/submodules/qtwayland-everywhere-src-$version.tar.xz"
+      }
+    }
+  ],
+  "cleanup": [
+    "/include",
+    "/lib/cmake",
+    "/lib/pkgconfig",
+    "/metatypes",
+    "/mkspecs",
+    "/modules",
+    "/sbom",
+    "/qml"
+  ],
+  "post-install": [
+    "install -Dm644 LICENSES/GPL-2.0-only.txt ${FLATPAK_DEST}/share/licenses/qtwayland/GPL-2.0-only.txt"
+  ]
+}
