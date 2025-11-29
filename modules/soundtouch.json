@@ -24,6 +24,6 @@
     "/lib/pkgconfig"
   ],
   "post-install": [
-    "install -Dm644 COPYING.TXT ${FLATPAK_DEST}/share/licenses/soundtouch/COPYING.TXT"
+    "install -Dm644 -t ${FLATPAK_DEST}/share/licenses/soundtouch COPYING.TXT"
   ]
 }

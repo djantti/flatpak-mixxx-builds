@@ -24,6 +24,6 @@
     "/lib/pkgconfig"
   ],
   "post-install": [
-    "install -Dm644 license.txt ${FLATPAK_DEST}/share/licenses/portmidi/license.txt"
+    "install -Dm644 -t ${FLATPAK_DEST}/share/licenses/portmidi license.txt"
   ]
 }

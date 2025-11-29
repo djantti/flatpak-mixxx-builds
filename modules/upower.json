@@ -36,6 +36,6 @@
     "/var"
   ],
   "post-install": [
-    "install -Dm644 ../COPYING ${FLATPAK_DEST}/share/licenses/upower/COPYING"
+    "install -Dm644 -t ${FLATPAK_DEST}/share/licenses/upower ../COPYING"
   ]
 }

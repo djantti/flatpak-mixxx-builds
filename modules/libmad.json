@@ -24,7 +24,6 @@
     "/lib/pkgconfig"
   ],
   "post-install": [
-    "install -Dm644 COPYING ${FLATPAK_DEST}/share/licenses/libmad/COPYING",
-    "install -Dm644 COPYRIGHT ${FLATPAK_DEST}/share/licenses/libmad/COPYRIGHT"
+    "install -Dm644 -t ${FLATPAK_DEST}/share/licenses/libmad COPYING COPYRIGHT"
   ]
 }

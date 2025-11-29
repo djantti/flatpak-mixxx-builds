@@ -24,6 +24,6 @@
     "/share/utf8cpp"
   ],
   "post-install": [
-    "install -Dm644 LICENSE ${FLATPAK_DEST}/share/licenses/utfcpp/LICENSE"
+    "install -Dm644 -t ${FLATPAK_DEST}/share/licenses/utfcpp LICENSE"
   ]
 }

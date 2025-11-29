@@ -23,7 +23,6 @@
     "/lib/pkgconfig"
   ],
   "post-install": [
-    "install -Dm644 LICENSE-gpl3.txt ${FLATPAK_DEST}/share/licenses/hidapi/LICENSE-gpl3.txt",
-    "install -Dm644 LICENSE.txt ${FLATPAK_DEST}/share/licenses/hidapi/LICENSE.txt"
+    "install -Dm644 -t ${FLATPAK_DEST}/share/licenses/hidapi LICENSE-gpl3.txt LICENSE.txt"
   ]
 }

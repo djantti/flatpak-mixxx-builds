@@ -23,6 +23,6 @@
     "/lib/pkgconfig"
   ],
   "post-install": [
-    "install -Dm644 COPYING ${FLATPAK_DEST}/share/licenses/libebur128/COPYING"
+    "install -Dm644 -t ${FLATPAK_DEST}/share/licenses/libebur128 COPYING"
   ]
 }
