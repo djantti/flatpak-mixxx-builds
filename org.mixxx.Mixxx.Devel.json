@@ -52,7 +52,6 @@
     "modules/portaudio.json",
     "modules/portmidi.json",
     "modules/hidapi.json",
-    "modules/utfcpp.json",
     "modules/chromaprint.json",
     "modules/rubberband.json",
     "modules/soundtouch.json",
