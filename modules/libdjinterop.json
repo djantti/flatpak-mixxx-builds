@@ -7,8 +7,8 @@
   "sources": [
     {
       "type": "archive",
-      "url": "https://github.com/xsco/libdjinterop/archive/refs/tags/0.26.1.tar.gz",
-      "sha256": "f4fbe728783c14acdc999b74ce3f03d680f9187e1ff676d6bf1233fdb64ae7b2",
+      "url": "https://github.com/xsco/libdjinterop/archive/refs/tags/0.27.0.tar.gz",
+      "sha256": "c4e73bf3907fd45be1c9767bcd9f367cbb7c279b4fe047bf2216bc92ae3d1668",
       "x-checker-data": {
         "type": "anitya",
         "project-id": 374896,
