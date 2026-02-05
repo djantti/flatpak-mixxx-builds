@@ -39,7 +39,7 @@ jobs:
     steps:
     - name: "Recover host disk space"
       run: |
-        echo "Recovering host disk space..."
+        : Recover host disk space
         rm -rf /host/opt/hostedtoolcache/CodeQL
         rm -rf /host/opt/hostedtoolcache/go
         rm -rf /host/usr/local/lib/android
@@ -47,20 +47,42 @@ jobs:
         rm -rf /host/usr/local/share/powershell
         rm -rf /host/usr/share/swift
         rm -rf /host/usr/share/dotnet
+
+        echo ::group::Available disc space
         df -h
+        echo ::endgroup::
 
     - name: "Repo checkout"
-      uses: actions/checkout@v4
+      uses: actions/checkout@v6
       with:
-        submodules: recursive
+        fetch-depth: 0
 
     - name: "Clone Mixxx repository"
       run: |
+        : Clone Mixxx repository
         git clone --single-branch --branch main https://github.com/mixxxdj/mixxx.git
+
+    - name: "Store Git version"
+      run: |
+        : Store Git version
+        GIT_DESC=$(git -C mixxx describe --always --first-parent --dirty=-modified)
+
+        if [ -z "$GIT_DESC" ]; then
+          GIT_DESC="unknown"
+        fi
+        echo "GIT_DESC=$GIT_DESC" >> $GITHUB_ENV
+
+        echo ::group::Git version
+        echo $GIT_DESC
+        echo ::endgroup::
 
     - name: "Update MetaInfo metadata"
       run: |
+        : Update MetaInfo metadata
+
+        echo ::group::Extracted metadata
         python scripts/update_metainfo.py
+        echo ::endgroup::
 
     - name: "Validate metadata"
       run: |
@@ -75,41 +97,58 @@ jobs:
     - name: "Build Flatpak"
       uses: flatpak/flatpak-github-actions/flatpak-builder@v6
       with:
-        bundle: Mixxx-Devel_${{ matrix.variant.arch }}.flatpak
         manifest-path: org.mixxx.Mixxx.Devel.json
-        cache: false
-        restore-cache: false
-        cache-key: flatpak-builder-${{ matrix.variant.arch }}-${{ github.sha }}
         arch: ${{ matrix.variant.arch }}
+        build-bundle: false
         upload-artifact: false
 
-    - name: "Validate repository"
-      run: flatpak-builder-lint --exceptions --user-exceptions checks/exceptions.json repo repo
-
-    - name: "Create debug bundle"
+    - name: "Sign repo commit"
+      if: env.GPG_PRIVATE_KEY && env.GPG_KEY_ID
       run: |
-        echo "Creating a debug extension bundle..."
-        /app/bin/flatpak build-bundle repo \
-          --runtime-repo=https://flathub.org/repo/flathub.flatpakrepo \
-          --arch=${{ matrix.variant.arch }} \
-          --runtime Mixxx-Devel_${{ matrix.variant.arch }}.Debug.flatpak org.mixxx.Mixxx.Devel.Debug
+        : Sign repo commit
+        gpg --import <(echo "${{ secrets.GPG_PRIVATE_KEY }}")
+        flatpak build-sign --gpg-sign="${{ secrets.GPG_KEY_ID }}" repo org.mixxx.Mixxx.Devel
+      env:
+        GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
+        GPG_KEY_ID: ${{ secrets.GPG_KEY_ID }}
+
+    - name: "Validate repository"
+      run: |
+        : Validate repository
+        flatpak-builder-lint --exceptions --user-exceptions checks/exceptions.json repo repo
+
+    - name: "Create Flatpak bundle"
+      run: |
+        : Create Flatpak bundle
+        flatpak build-bundle --arch=${{ matrix.variant.arch }} repo \
+          Mixxx-Devel-${GIT_DESC}_${{ matrix.variant.arch }}.flatpak org.mixxx.Mixxx.Devel
+
+    - name: "Create Flatpak Debug extension"
+      run: |
+        : Create Flatpak Debug extension
+        flatpak build-bundle --arch=${{ matrix.variant.arch }} repo \
+          --runtime Mixxx-Devel-${GIT_DESC}_${{ matrix.variant.arch }}.Debug.flatpak org.mixxx.Mixxx.Devel.Debug
 
     - name: "Prepare bundle directory"
-      if: inputs.bundle_upload
       run: |
+        : Prepare bundle directory
         mkdir -p bundle
-        mv Mixxx-Devel_${{ matrix.variant.arch }}.flatpak bundle
-        mv Mixxx-Devel_${{ matrix.variant.arch }}.Debug.flatpak bundle
+        mv Mixxx-Devel-${GIT_DESC}_${{ matrix.variant.arch }}.flatpak bundle
+        mv Mixxx-Devel-${GIT_DESC}_${{ matrix.variant.arch }}.Debug.flatpak bundle
+
+        echo ::group::Bundle files
+        ls -l bundle
+        echo ::endgroup::
 
     - name: "Upload bundles"
-      uses: actions/Upload-artifact@v4
+      uses: actions/Upload-artifact@v6
       if: inputs.bundle_upload
       with:
         name: bundle_${{ matrix.variant.arch }}
         path: bundle
 
     - name: "Upload repo"
-      uses: actions/Upload-artifact@v4
+      uses: actions/Upload-artifact@v6
       if: inputs.repo_upload
       with:
         name: repo_${{ matrix.variant.arch }}

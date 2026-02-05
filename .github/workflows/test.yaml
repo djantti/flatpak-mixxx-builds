@@ -14,3 +14,4 @@ jobs:
       repo_upload: false
       pages_deploy: false
       repo_deploy: true
+    secrets: inherit

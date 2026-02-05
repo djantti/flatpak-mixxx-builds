@@ -10,7 +10,7 @@ jobs:
       id-token: write
       pages: write
     with:
-      bundle_upload: true
+      bundle_upload: false
       repo_upload: false
-      pages_deploy: true
+      pages_deploy: false
       repo_deploy: true
