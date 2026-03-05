@@ -1,5 +1,6 @@
 {
     "org.mixxx.Mixxx.Devel": [
+        "url-not-reachable",
         "appid-url-not-reachable",
         "appstream-external-screenshot-url",
         "appstream-screenshots-not-mirrored-in-ostree"
